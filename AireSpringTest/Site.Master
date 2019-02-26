@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="AireSpringTest.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style type="text/css">
+        .navbar {
+            display: flex;
+            justify-content: flex-start;
+            list-style: none;
+        }
+
+            .navbar a {
+                display: block;
+                padding: 1em;
+                font-family: Courier New;
+                font-size: x-large;
+            }
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <asp:ScriptManager ID="ScriptManager" runat="server" />
+
+        <div>
+
+            <ul class="navbar">
+                <li><a href="AddNewEmployee.aspx">Add New Employee</a></li>
+                <li><a href="ListEmployees.aspx">List Employees</a></li>
+            </ul>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+        </div>
+    </form>
+</body>
+</html>
